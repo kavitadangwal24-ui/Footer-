@@ -1,0 +1,96 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f8f7;
+  color: #15251f;
+}
+
+.demo-main {
+  min-height: 540px;
+  padding: 100px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, #d6f4e7 0%, transparent 55%),
+    #f6f8f7;
+}
+
+.demo-label {
+  margin-bottom: 22px;
+  color: #34745b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.demo-main h1 {
+  margin: 0;
+  color: #15251f;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.demo-main p {
+  max-width: 520px;
+  margin: 22px 0 30px;
+  color: #5e7068;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.demo-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 22px;
+  border-radius: 8px;
+  background: #1d4033;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.demo-button:hover {
+  transform: translateY(-2px);
+  background: #2c5c48;
+}
+
+.demo-button:focus-visible {
+  outline: 3px solid #34745b;
+  outline-offset: 4px;
+}
+
+@media (max-width: 520px) {
+  .demo-main {
+    min-height: 440px;
+    padding: 70px 22px;
+  }
+
+  .demo-main h1 {
+    letter-spacing: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .demo-button {
+    transition: none;
+  }
+}
